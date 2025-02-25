@@ -14,5 +14,10 @@ resources:
     cpu: 100m
     memory: 128Mi
 
+serviceAccount:
+  name: ecr-sa
+  namespace: default
+
+
 nameOverride: ""
 fullnameOverride: ""
