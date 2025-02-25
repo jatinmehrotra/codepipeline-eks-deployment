@@ -17,12 +17,22 @@ spec:
       labels:
         app: hello-k8s
     spec:
+      serviceAccountName: ecr-sa
       containers:
         - name: hello-k8s
-          image: nginx
+          image: 292170836962.dkr.ecr.us-east-1.amazonaws.com/eks-cicd-pipeline:ekscicdtest.master..2024-11-25.08.12.02.c6a56750
           securityContext:
             privileged: false
             readOnlyRootFilesystem: true
             allowPrivilegeEscalation: false
           ports:
             - containerPort: 8080
+
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ecr-sa
+  namespace: default
