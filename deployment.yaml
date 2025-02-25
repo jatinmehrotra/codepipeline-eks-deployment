@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: hello-k8s
-          image: ekscicdtest.master..2024-11-25.08.12.02.c6a56750
+          image: nginx
           securityContext:
             privileged: false
             readOnlyRootFilesystem: true
