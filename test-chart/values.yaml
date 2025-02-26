@@ -1,5 +1,5 @@
 # Default values for test-chart
-replicaCount: 1
+replicaCount: 2
 
 image:
   repository: nginx
